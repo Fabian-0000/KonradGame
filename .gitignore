@@ -2,6 +2,3 @@
 *.o
 build/
 .DS_Store
-libs/SFML/
-libs/SDL/
-libs/Json/include/
