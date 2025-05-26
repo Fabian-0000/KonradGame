@@ -1,0 +1,241 @@
+{
+    "Objects": [
+        {
+            "Colliders": [],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                0.0,
+                -9.0,
+                16.0,
+                9.0
+            ],
+            "SpriteIndex": 1,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                192.0,
+                108.0
+            ],
+            "Type": "Default"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        5.333333492279053,
+                        -7.75,
+                        5.249999523162842,
+                        7.166666507720947,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": true,
+                    "Tag": "Interact",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                6.0,
+                -7.333333492279053,
+                3.9166669845581055,
+                4.4166669845581055
+            ],
+            "SpriteIndex": 2,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                47.000003814697266,
+                53.000003814697266
+            ],
+            "Type": "ElevatorDoor"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        -0.0,
+                        -0.5833333134651184,
+                        16.0,
+                        0.5833333134651184,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        0.0,
+                        -9.0,
+                        1.1666666269302368,
+                        9.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        0.0,
+                        -9.0,
+                        16.0,
+                        0.5833330154418945,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        14.833333015441895,
+                        -9.0,
+                        1.1666669845581055,
+                        9.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                0.0,
+                -9.0,
+                16.0,
+                9.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                192.0,
+                108.0
+            ],
+            "Type": "Default"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        1.1666666269302368,
+                        -4.416666507720947,
+                        0.3333333730697632,
+                        3.8333332538604736,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        1.1666666269302368,
+                        -4.416666507720947,
+                        1.4166666269302368,
+                        3.8333332538604736,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": true,
+                    "Tag": "Interact",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                0.0,
+                -0.0,
+                1.0,
+                1.0
+            ],
+            "SpriteIndex": 3,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                12.0,
+                12.0
+            ],
+            "Type": "Panel"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        0.0,
+                        -9.0,
+                        16.0,
+                        9.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": true,
+                    "Tag": "CameraLocked",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": false,
+            "Rect": [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Type": "Default"
+        }
+    ],
+    "Resources": {
+        "Sprites": [
+            "..\\res\\sprites\\elevator\\inside.png",
+            "..\\res\\sprites\\elevator\\inside_background.png",
+            "..\\res\\sprites\\elevator\\inside_doors.png",
+            "..\\res\\sprites\\elevator\\panel.png"
+        ]
+    },
+    "Type": "LevelData"
+}

@@ -1,0 +1,237 @@
+{
+    "Objects": [
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        0.0,
+                        -1.3333333730697632,
+                        16.0,
+                        1.3333333730697632,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        14.666666984558105,
+                        -9.0,
+                        1.3333330154418945,
+                        7.666666507720947,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        -0.0,
+                        -10.0,
+                        16.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                },
+                {
+                    "Data": [
+                        -1.0,
+                        -10.0,
+                        1.0,
+                        10.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": false,
+                    "Tag": "Default",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                255.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                0.0,
+                -9.0,
+                16.0,
+                9.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                192.0,
+                108.0
+            ],
+            "Type": "Default"
+        },
+        {
+            "Colliders": [],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": false,
+            "Rect": [
+                0.8333333134651184,
+                -2.3333332538604736,
+                1.0,
+                1.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Type": "ElevatorDoor"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        0.0,
+                        -9.0,
+                        16.0,
+                        9.0,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": true,
+                    "Tag": "Default",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                0.0
+            ],
+            "HasSprite": false,
+            "Rect": [
+                0.0,
+                -9.0,
+                16.0,
+                9.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Type": "CameraView"
+        },
+        {
+            "Colliders": [
+                {
+                    "Data": [
+                        14.333333015441895,
+                        -4.583333492279053,
+                        0.33333396911621094,
+                        3.1666669845581055,
+                        0.0,
+                        0.0
+                    ],
+                    "IsTrigger": true,
+                    "Tag": "Warp",
+                    "Type": 0
+                }
+            ],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                255.0
+            ],
+            "HasSprite": false,
+            "Rect": [
+                17.0,
+                -9.0,
+                1.0,
+                1.0
+            ],
+            "SpriteIndex": 0,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Type": "OnCollisionLoadLevel1"
+        },
+        {
+            "Colliders": [],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                255.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                13.25,
+                -4.583333492279053,
+                2.75,
+                3.25
+            ],
+            "SpriteIndex": 1,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                33.0,
+                39.0
+            ],
+            "Type": "RevolvingDoor"
+        },
+        {
+            "Colliders": [],
+            "Color": [
+                255.0,
+                255.0,
+                255.0,
+                255.0
+            ],
+            "HasSprite": true,
+            "Rect": [
+                1.5833333730697632,
+                -8.833333015441895,
+                12.75,
+                2.9166667461395264
+            ],
+            "SpriteIndex": 2,
+            "SpriteRect": [
+                0.0,
+                0.0,
+                153.0,
+                35.0
+            ],
+            "Type": "Default"
+        }
+    ],
+    "Resources": {
+        "Sprites": [
+            "..\\res\\sprites\\entrance\\background.png",
+            "..\\res\\sprites\\entrance\\revolving_door.png",
+            "..\\res\\sprites\\entrance\\text.png"
+        ]
+    },
+    "Type": "LevelData"
+}
