@@ -45,6 +45,8 @@ void fullscreenWindow(sf::RenderWindow& window, bool fullscreen) {
 
 	window.create(mode, "Game", style);
 	window.setVerticalSyncEnabled(true);
+
+	if (!fullscreen) ActivateDarkMode(window);
 }
 
 void MainLoop::Run() {
@@ -158,7 +160,7 @@ void MainLoop::Run() {
 
 		if (input.keyboard->IsKeyPressed(sf::Keyboard::F11)) {
 			fullscreen = !fullscreen;
-			fullscreenWindow(((sf::RenderWindow&)m_Renderer.GetRenderTarget()), fullscreen);
+			fullscreenWindow(m_Window, fullscreen);
 		}
 
 		if (m_Renderer.GetFadeStatus() != Renderer::Fade::Out)
@@ -169,6 +171,13 @@ void MainLoop::Run() {
 		m_Renderer.GetRenderTarget().clear();
 
 		state.Render();
+
+		if (state.Get() == State::States::MainMenu || state.PauseMenuOpen()) {
+			m_Window.setMouseCursorVisible(true);
+		}
+		else {
+			m_Window.setMouseCursorVisible(false);
+		}
 
 		g_ParticleSystem.Render(m_Renderer);
 

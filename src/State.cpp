@@ -36,14 +36,21 @@ void State::ClosePauseMenu() {
 	m_PauseMenuOpened = false;
 }
 
-void State::Update(Input& input) {
-	if (input.IsButtonPressed(Input::Button::Pause)) {
-		OpenPauseMenu();
-	}
+bool State::PauseMenuOpen() {
+	return m_PauseMenuOpened;
+}
 
+void State::Update(Input& input) {
 	if (m_PauseMenuOpened) {
 		m_PauseMenu.Update(input, *this);
 		return;
+	}
+	else {
+		m_PauseMenu.Reset();
+	}
+
+	if (input.IsButtonPressed(Input::Button::Pause) && !m_PauseMenu.ClosedThisFrame()) {
+		OpenPauseMenu();
 	}
 
 	if (m_LastState == m_State) {

@@ -2,7 +2,6 @@
 
 #ifdef WIN32
 #include <dwmapi.h>
-#pragma comment(lib,"dwmapi.lib")
 
 #ifndef DWMWA_USE_IMMERSIVE_DARK_MODE
 #define DWMWA_USE_IMMERSIVE_DARK_MODE 20

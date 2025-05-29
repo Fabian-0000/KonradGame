@@ -12,6 +12,8 @@ public:
 
 	void Render(Renderer& renderer) override;
 
+	bool ClosedThisFrame();
+
 private:
 	int8_t m_Selected = 0;
 
@@ -20,4 +22,8 @@ private:
 	float m_Time = 0.0f;
 
 	bool m_Exit = false;
+
+	bool m_OpenedThisFrame = false;
+
+	bool m_ClosedThisFrame = false;
 };

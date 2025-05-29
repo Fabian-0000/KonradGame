@@ -12,6 +12,8 @@ void PauseMenu::Reset() {
 	m_Selected = 0;
 	m_SelectionUpdated = false;
 	m_Time = 0.0f;
+	m_OpenedThisFrame = true;
+	m_ClosedThisFrame = false;
 }
 
 void PauseMenu::Update(Input& input, State& state) {
@@ -40,9 +42,14 @@ void PauseMenu::Update(Input& input, State& state) {
 		m_Exit = true;
 	}
 
-	if (input.IsButtonPressed(Input::Button::Cancel)) {
+	m_ClosedThisFrame = false;
+
+	if (input.IsButtonPressed(Input::Button::Cancel) && !m_OpenedThisFrame) {
 		state.ClosePauseMenu();
+		m_ClosedThisFrame = true;
 	}
+
+	m_OpenedThisFrame = false;
 }
 
 void PauseMenu::Render(Renderer& renderer) {
@@ -84,4 +91,8 @@ void PauseMenu::Render(Renderer& renderer) {
 	if (m_Exit) {
 		((sf::RenderWindow&)renderer.GetRenderTarget()).close();
 	}
+}
+
+bool PauseMenu::ClosedThisFrame() {
+	return m_ClosedThisFrame;
 }

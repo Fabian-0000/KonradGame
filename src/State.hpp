@@ -40,6 +40,8 @@ public:
 
 	void ClosePauseMenu();
 
+	bool PauseMenuOpen();
+
 private:
 	void Load();
 
