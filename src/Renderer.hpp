@@ -5,6 +5,8 @@
 #include "View.hpp"
 #include "Camera.hpp"
 
+#include <vector>
+
 inline sf::Vector2f ToSFMLVec2(vec2 v) {
 	return sf::Vector2f(v.x, v.y);
 }

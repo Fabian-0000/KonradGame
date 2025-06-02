@@ -17,6 +17,8 @@
 
 #include "SaveData.hpp"
 
+#include "Objects/MovingPlatform.hpp"
+
 #include <SDL3/SDL.h>
 
 MainLoop::MainLoop()
@@ -163,8 +165,9 @@ void MainLoop::Run() {
 			fullscreenWindow(m_Window, fullscreen);
 		}
 
-		if (m_Renderer.GetFadeStatus() != Renderer::Fade::Out)
+		if (m_Renderer.GetFadeStatus() != Renderer::Fade::Out) {
 			state.Update(input);
+		}
 
 		g_ParticleSystem.Update();
 

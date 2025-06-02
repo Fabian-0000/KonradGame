@@ -60,6 +60,7 @@ set(SOURCE_OBJECTS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/OnPowerDisappear.cpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/Key.cpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/Rad.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatform.cpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatformHorizontal.cpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatformVertical.cpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/DisappearingPlatform.cpp
@@ -135,6 +136,7 @@ set(HEADER_OBJECTS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/OnPowerDisappear.hpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/Key.hpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/Rad.hpp  
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatform.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatformHorizontal.hpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/MovingPlatformVertical.hpp  
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Objects/DisappearingPlatform.hpp

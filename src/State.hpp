@@ -8,6 +8,8 @@
 #include "Entrance.hpp"
 #include "PauseMenu.hpp"
 
+#include <memory>
+
 class State {
 public:
 	State(Renderer& renderer);

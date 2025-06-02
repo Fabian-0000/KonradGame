@@ -3,6 +3,8 @@
 #include "Object.hpp"
 #include "Input.hpp"
 
+#include <memory>
+
 class Engine {
 public:
 	Engine();

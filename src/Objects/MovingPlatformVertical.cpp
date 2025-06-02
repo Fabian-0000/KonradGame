@@ -4,6 +4,8 @@
 
 #include "../Time.hpp"
 
+#include "MovingPlatform.hpp"
+
 void MovingPlatformVertical::Update(Input& input) {
 	if (!m_Started) {
 		FloatRect rect;

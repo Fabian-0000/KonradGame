@@ -3,6 +3,8 @@
 #include "Renderer.hpp"
 #include "Animation.hpp"
 
+#include <vector>
+
 class ParticleSystem;
 
 class Particle {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Level.hpp"
+#include <memory>
 
 class Elevator : public Level {
 public:

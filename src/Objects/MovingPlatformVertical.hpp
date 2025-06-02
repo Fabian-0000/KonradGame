@@ -13,11 +13,12 @@ public:
 private:
 	float m_Amplitude = 0.0f;
 	float m_Center;
-	float m_Clock;
 	float m_StartAngle = 0.0f;
 
 	Player* m_Player = nullptr;
 	bool m_Started = false;
 
 	float m_LaneSize = 0.0f;
+
+	float m_Clock = 0.0f;
 };

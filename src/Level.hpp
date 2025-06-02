@@ -47,6 +47,9 @@
 #include "Enemies/Gonraed.hpp"
 #include "Enemies/Gondrae.hpp"
 
+#include <memory>
+#include <vector>
+
 inline std::shared_ptr<Object> GetObjectFromId(uint64_t id) {
 	switch (id) {
 	case (uint64_t)Object::Id::Default:					 return std::make_shared<Object>();

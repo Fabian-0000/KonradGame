@@ -2,6 +2,7 @@
 #include "Time.hpp"
 #include "Objects/Rad.hpp"
 #include "SaveData.hpp"
+#include "Objects/MovingPlatform.hpp"
 
 #define JUMP_SPEED -0.15f
 #define DOUBLE_JUMP_SPEED -0.225f
@@ -437,7 +438,12 @@ void Player::OnCollision(const Collider& self, const Collider& other) {
 		hp--;
 		invincibilityClock.restart();
 		invincible = true;
+		ResetMovingPlatforms();
 		Warp(vec2(lastCheckpoint.x + lastCheckpoint.w / 2.0f - transform.size.w / 2.0f, lastCheckpoint.y + lastCheckpoint.h - transform.size.h));
+	}
+
+	if (other.tag == Collider::Tags::Warp) {
+		ResetMovingPlatforms();
 	}
 
 	if (other.parent->id == Object::Id::Key) {

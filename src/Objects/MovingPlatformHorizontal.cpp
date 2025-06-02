@@ -4,6 +4,8 @@
 
 #include "../Time.hpp"
 
+#include "MovingPlatform.hpp"
+
 void MovingPlatformHorizontal::Update(Input& input) {
 	if (!m_Started) {
 		FloatRect rect;
@@ -26,7 +28,12 @@ void MovingPlatformHorizontal::Update(Input& input) {
 		m_StartAngle = std::asinf(std::clamp((size.x - m_Center) / m_Amplitude, -1.0f, 1.0f));
 	}
 
-	m_Clock += Time.DeltaTime();
+	if (!g_Activated) { 
+		m_PlayerTouched = false; 
+		m_Clock = 0.0f;
+	}
+
+	if (m_PlayerTouched) m_Clock += Time.DeltaTime();
 
 	float pos = m_Center + m_Amplitude * std::sin(2.f * 3.141592f * (1.0f / m_LaneSize) * m_Clock + m_StartAngle);
 
@@ -43,5 +50,12 @@ void MovingPlatformHorizontal::Update(Input& input) {
 void MovingPlatformHorizontal::OnCollision(const Collider& self, const Collider& other) {
 	if (other.tag == Collider::Tags::PlayerGround && !self.isTrigger) {
 		m_Player = (Player*)other.parent;
+		m_PlayerTouched = true;
+		g_Activated = true;
+	}
+
+	if ((other.tag == Collider::Tags::Player || other.tag == Collider::Tags::PlayerTop) && !self.isTrigger) {
+		m_PlayerTouched = true;
+		g_Activated = true;
 	}
 }
