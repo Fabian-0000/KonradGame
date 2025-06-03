@@ -409,7 +409,7 @@ void Player::OnCollision(const Collider& self, const Collider& other) {
 		floating = true;
 	}
 
-	if (self.tag == Collider::Tags::PlayerGround && !other.isTrigger) {
+	if (self.tag == Collider::Tags::PlayerGround && !other.isTrigger && other.parent->type != ObjectType::Dynamic) {
 		if (speed.y >= 0.0f) isGrounded = true;
 		if (speed.y >= 0.0f) {
 			speed.y = 0.0f;
@@ -418,7 +418,7 @@ void Player::OnCollision(const Collider& self, const Collider& other) {
 		if (!dashing) canDash = true;
 	}
 
-	if (self.tag == Collider::Tags::PlayerTop && !other.isTrigger) {
+	if (self.tag == Collider::Tags::PlayerTop && !other.isTrigger && other.parent->type != ObjectType::Dynamic) {
 		if (speed.y < 0.0f) {
 			speed.y = 0.0f;
 		}

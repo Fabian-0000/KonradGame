@@ -185,7 +185,7 @@ void Level::AddGonraed(FloatRect rect) {
 	gonraed->colliders.push_back(highRange);
 	gonraed->colliders.push_back(lowRange);
 	gonraed->colliders.push_back(groundCheck);
-	gonraed->type = ObjectType::HalfDynamic;
+	gonraed->type = ObjectType::Dynamic;
 	gonraed->hasTexture = true;
 	gonraed->id = Object::Id::Gonraed;
 
@@ -232,7 +232,7 @@ void Level::AddGondrae(FloatRect rect) {
 	gondrae->colliders.push_back(highRange);
 	gondrae->colliders.push_back(lowRange);
 	gondrae->colliders.push_back(groundCheck);
-	gondrae->type = ObjectType::HalfDynamic;
+	gondrae->type = ObjectType::Dynamic;
 	gondrae->hasTexture = true;
 	gondrae->id = Object::Id::Gondrae;
 
@@ -509,6 +509,7 @@ void Level::InternalLoad(const char* filename, Renderer& renderer) {
 						else if (tag == "Damage")			collider.tag = Collider::Tags::Damage;
 						else if (tag == "Death")			collider.tag = Collider::Tags::Death;
 						else if (tag == "Light")			collider.tag = Collider::Tags::Light;
+						else if (tag == "TorchLight")		collider.tag = Collider::Tags::TorchLight;
 						else if (tag == "CheckPoint")		collider.tag = Collider::Tags::CheckPoint;
 						else if (tag == "Lane")				collider.tag = Collider::Tags::Lane;
 						else if (tag == "Warp")				collider.tag = Collider::Tags::Warp;

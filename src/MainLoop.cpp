@@ -158,8 +158,6 @@ void MainLoop::Run() {
 
 		controller.Update();
 
-		input.Update();
-
 		if (input.keyboard->IsKeyPressed(sf::Keyboard::F11)) {
 			fullscreen = !fullscreen;
 			fullscreenWindow(m_Window, fullscreen);

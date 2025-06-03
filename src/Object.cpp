@@ -100,8 +100,8 @@ void Object::Collide(Object& other) {
 			}
 
 			else if (type == ObjectType::Dynamic && other.type == ObjectType::Dynamic) {
-				response1 = 0.5f;
-				response2 = 0.5f;
+				response1 = 0.0f;
+				response2 = 0.0f;
 			}
 
 			else if (type == ObjectType::HalfDynamic && other.type == ObjectType::HalfDynamic) {

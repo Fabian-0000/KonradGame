@@ -65,6 +65,7 @@ public:
 		HighRange,
 		LowRange,
 		Light,
+		TorchLight,
 		CheckPoint,
 		Lane,
 		Warp

@@ -5,6 +5,9 @@
 #include "Input.hpp"
 #include "Renderer.hpp"
 
+#include <vector>
+#include <memory>
+
 enum class ObjectType {
 	Static,
 	Dynamic,

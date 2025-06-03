@@ -6,6 +6,8 @@
 
 #include "MovingPlatform.hpp"
 
+#include <cmath>
+
 void MovingPlatformVertical::Update(Input& input) {
 	if (!m_Started) {
 		FloatRect rect;
@@ -25,7 +27,7 @@ void MovingPlatformVertical::Update(Input& input) {
 		m_Amplitude = std::abs(rect.h) / 2.0f - size.h / 2.0f;
 		m_Center = rect.y + rect.h / 2.0f - transform.size.h / 2.0f;
 		m_Started = true;
-		m_StartAngle = std::asinf(std::clamp((size.y - m_Center) / m_Amplitude, -1.0f, 1.0f));
+		m_StartAngle = std::asin(std::clamp((size.y - m_Center) / m_Amplitude, -1.0f, 1.0f));
 	}
 
 	m_Clock += Time.DeltaTime();

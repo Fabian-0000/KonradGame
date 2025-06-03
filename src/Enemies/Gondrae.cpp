@@ -25,13 +25,16 @@ void Gondrae::Update(Input& input) {
 	if (m_Player) {
 		m_Walking = true;
 
-		if (m_Player->transform.position.x < transform.position.x) {
-			m_Flip = true;
-			m_Speed.x = -1.5f;
-		}
-		else {
-			m_Flip = false;
-			m_Speed.x = 1.5f;
+		if (m_TurnClock.getElapsedTime().asSeconds() > 1.0f) {
+			if (m_Player->transform.position.x < transform.position.x) {
+				m_Flip = true;
+				m_Speed.x = -1.5f;
+			}
+			else {
+				m_Flip = false;
+				m_Speed.x = 1.5f;
+			}
+			m_TurnClock.restart();
 		}
 	}
 	else {
@@ -87,6 +90,11 @@ void Gondrae::OnCollision(const Collider& self, const Collider& other) {
 
 	if (self.tag == Collider::Tags::GroundCheck && !other.isTrigger) {
 		m_Grounded = true;
+	}
+
+	if (other.tag == Collider::Tags::Death) {
+		exists = false;
+		return;
 	}
 }
 

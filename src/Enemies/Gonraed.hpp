@@ -30,4 +30,6 @@ private:
 	vec2 m_Speed = 0.0f;
 
 	bool m_Grounded = false;
+
+	sf::Clock m_TurnClock;
 };

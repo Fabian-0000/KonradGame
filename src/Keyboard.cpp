@@ -21,7 +21,7 @@ void Keyboard::Update(sf::Event& evnt) {
 
 	sf::Keyboard::Key code = evnt.key.code < KEY_COUNT ? evnt.key.code : sf::Keyboard::Key::KeyCount;
 
-	if (evnt.type == sf::Event::KeyPressed) {
+	if (evnt.type == sf::Event::KeyPressed && !m_KeyStates[code]) {
 		m_IsEvent = true;
 		m_KeysDown[code] = true;
 		m_KeyStates[code] = true;

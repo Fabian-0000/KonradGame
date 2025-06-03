@@ -6,6 +6,8 @@
 
 #include "MovingPlatform.hpp"
 
+#include <cmath>
+
 void MovingPlatformHorizontal::Update(Input& input) {
 	if (!m_Started) {
 		FloatRect rect;
@@ -25,7 +27,7 @@ void MovingPlatformHorizontal::Update(Input& input) {
 		m_Amplitude = std::abs(rect.w) / 2.0f - size.w / 2.0f;
 		m_Center = rect.x + rect.w / 2.0f - transform.size.w / 2.0f;
 		m_Started = true;
-		m_StartAngle = std::asinf(std::clamp((size.x - m_Center) / m_Amplitude, -1.0f, 1.0f));
+		m_StartAngle = std::asin(std::clamp((size.x - m_Center) / m_Amplitude, -1.0f, 1.0f));
 	}
 
 	if (!g_Activated) { 

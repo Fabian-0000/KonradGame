@@ -51,8 +51,7 @@ bool Input::IsButtonPressed(Button button) {
 			   keyboard->IsKeyPressed(sf::Keyboard::RControl);
 	case Button::Dash:
 		return controller->GetLeftTriggerState() > 0.5f ||
-			   keyboard->IsKeyPressed(sf::Keyboard::LShift) || 
-			   keyboard->IsKeyPressed(sf::Keyboard::RShift);
+			   (keyboard->IsKeyPressed(sf::Keyboard::LShift) || keyboard->IsKeyPressed(sf::Keyboard::RShift));
 	case Button::Sneak:
 		return controller->IsButtonPressed(SDL_GAMEPAD_BUTTON_LEFT_SHOULDER) ||
 			   keyboard->IsKeyPressed(sf::Keyboard::S);

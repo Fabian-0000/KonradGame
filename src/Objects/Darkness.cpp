@@ -80,6 +80,17 @@ void Darkness::OnCollision(const Collider& self, const Collider& other) {
 			}
 		}
 	}
+	else if (other.tag == Collider::Tags::TorchLight) {
+		if (other.type == ColliderType::CircleCollider) {
+			if (m_LightSourcesIndex < MAX_LIGHTS) {
+				LightSource source;
+				source.pos = other.parent->GetCircleColliderCircle(other).center;
+				source.radius = other.parent->GetCircleColliderCircle(other).radius;
+				source.brightness = 0.25f;
+				m_LightSources[m_LightSourcesIndex++] = source;
+			}
+		}
+	}
 	else if (other.tag == Collider::Tags::PlayerShot) {
 		if (m_LightSourcesIndex < MAX_LIGHTS) {
 			m_Shot = true;
