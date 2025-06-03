@@ -33,6 +33,8 @@ private:
 
 class Player : public Object {
 public:
+	Player();
+
 	bool IsDashing();
 
 	void Update(Input& input) override;
@@ -78,9 +80,7 @@ private:
 
 	void UpdateSprite(Input& input);
 
-	uint8_t maxHp = 5;
-
-	int8_t hp = 5;
+	int8_t hp = 0;
 
 	uint8_t maxRads = 2;
 

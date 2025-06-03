@@ -94,17 +94,19 @@ bool Shot::IsAnimationOver() {
 
 /////////////////////////////////////////////////////////////////////
 
+Player::Player() {
+	hp = g_SaveData.hpCount;
+}
+
 bool Player::IsDashing() {
 	return dashing;
 }
 
 bool Player::IsDead() {
-	return (maxHp != 0 && hp <= 0);
+	return (g_SaveData.hpCount != 0 && hp <= 0);
 }
 
 void Player::Update(Input& input) {
-	maxHp = g_SaveData.hpCount;
-
 	m_AnimationIdle.Update();
 	m_AnimationShoot.Update();
 	m_AnimationSprint.Update();
@@ -766,7 +768,7 @@ void Player::RenderOverlay(Renderer& renderer, bool interactOnly) {
 	object.setTexture(&renderer.GetPlayerTextures()[Renderer::PlayerTextures::Overlay]);
 
 	if (!interactOnly) {
-		for (uint8_t i = 0; i < maxHp; i++) {
+		for (uint8_t i = 0; i < g_SaveData.hpCount; i++) {
 			uint8_t rectIndex = i < hp ? Heart : EmptyHeart;
 
 			object.setTextureRect(ToSFMLIntRect(textureRects[rectIndex]));
