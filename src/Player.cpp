@@ -4,6 +4,8 @@
 #include "SaveData.hpp"
 #include "Objects/MovingPlatform.hpp"
 
+#include <cmath>
+
 #define JUMP_SPEED -0.15f
 #define DOUBLE_JUMP_SPEED -0.225f
 #define GRAVITY_ACC 0.015f
@@ -131,7 +133,7 @@ void Player::Update(Input& input) {
 	cameraFree = false;
 	interacting = false;
 
-	moving = abs(lastPosition.x - transform.position.x) > 0.0001f;
+	moving = std::abs(lastPosition.x - transform.position.x) > 0.0001f;
 	lastPosition = transform.position;
 
 	if (input.IsButtonPressed(Input::Button::Interact)) {
