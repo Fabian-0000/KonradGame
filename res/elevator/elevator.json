@@ -231,10 +231,10 @@
     ],
     "Resources": {
         "Sprites": [
-            "..\\res\\sprites\\elevator\\inside.png",
-            "..\\res\\sprites\\elevator\\inside_background.png",
-            "..\\res\\sprites\\elevator\\inside_doors.png",
-            "..\\res\\sprites\\elevator\\panel.png"
+            "../res/sprites/elevator/inside.png",
+            "../res/sprites/elevator/inside_background.png",
+            "../res/sprites/elevator/inside_doors.png",
+            "../res/sprites/elevator/panel.png"
         ]
     },
     "Type": "LevelData"
