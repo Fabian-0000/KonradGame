@@ -96,7 +96,7 @@ public:
 	}
 
 	T length() {
-		return sqrt(x * x + y * y);
+		return std::sqrt(x * x + y * y);
 	}
 
 	Vector2<T> normalize() {
@@ -109,7 +109,7 @@ public:
 
 	// slightly faster 
 	T lengthsqr() {
-		return x * x + y * y;
+		return (T)(x * x + y * y);
 	}
 };
 
