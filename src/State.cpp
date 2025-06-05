@@ -90,7 +90,7 @@ void State::Load() {
 
 	case States::Elevator: {
 		std::shared_ptr<Elevator> current = std::make_shared<Elevator>();
-		current->LoadFromFile("..\\res\\elevator\\elevator.json", m_Renderer);
+		current->LoadFromFile("../res/elevator/elevator.json", m_Renderer);
 
 		m_Current = current;
 
@@ -99,7 +99,7 @@ void State::Load() {
 
 	case States::Entrance: {
 		std::shared_ptr<Entrance> current = std::make_shared<Entrance>();
-		current->LoadFromFile("..\\res\\entrance\\level.json", m_Renderer);
+		current->LoadFromFile("../res/entrance/level.json", m_Renderer);
 
 		m_Current = current;
 
@@ -108,7 +108,7 @@ void State::Load() {
 
 	case States::Level0: {
 		std::shared_ptr<Level> current = std::make_shared<Level>();
-		current->LoadFromFile("..\\res\\level_0\\level.json", m_Renderer);
+		current->LoadFromFile("../res/level_0/level.json", m_Renderer);
 		current->SetLevelIndex(0);
 
 		m_Current = current;
@@ -118,7 +118,7 @@ void State::Load() {
 
 	case States::Level1: {
 		std::shared_ptr<Level> current = std::make_shared<Level>();
-		current->LoadFromFile("..\\res\\level_1\\level.json", m_Renderer);
+		current->LoadFromFile("../res/level_1/level.json", m_Renderer);
 		current->SetLevelIndex(1);
 
 		m_Current = current;
@@ -128,7 +128,7 @@ void State::Load() {
 
 	case States::Level2: {
 		std::shared_ptr<Level> current = std::make_shared<Level>();
-		current->LoadFromFile("..\\res\\level_2\\level.json", m_Renderer);
+		current->LoadFromFile("../res/level_2/level.json", m_Renderer);
 		current->SetLevelIndex(2);
 
 		m_Current = current;
@@ -138,7 +138,7 @@ void State::Load() {
 
 	case States::Level3: {
 		std::shared_ptr<Level> current = std::make_shared<Level>();
-		current->LoadFromFile("..\\res\\level_3\\level.json", m_Renderer);
+		current->LoadFromFile("../res/level_3/level.json", m_Renderer);
 		current->SetLevelIndex(3);
 
 		m_Current = current;
@@ -153,7 +153,7 @@ void State::Load() {
 
 	default: {
 		std::shared_ptr<Elevator> current = std::make_shared<Elevator>();
-		current->LoadFromFile("..\\res\\elevator\\elevator.json", m_Renderer);
+		current->LoadFromFile("../res/elevator/elevator.json", m_Renderer);
 
 		m_Current = current;
 

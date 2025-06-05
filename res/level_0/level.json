@@ -1336,15 +1336,15 @@
     ],
     "Resources": {
         "Sprites": [
-            "..\\res\\sprites\\level_0\\level.png",
-            "..\\res\\sprites\\elevator\\outside_open.png",
-            "..\\res\\sprites\\level_0\\box.png",
-            "..\\res\\sprites\\level_0\\door.png",
-            "..\\res\\sprites\\level_0\\chandelier.png",
-            "..\\res\\sprites\\level_0\\glass_box.png",
-            "..\\res\\sprites\\level_0\\gun.png",
-            "..\\res\\sprites\\collectables\\rad.png",
-            "..\\res\\sprites\\elevator\\lever.png"
+            "../res/sprites/level_0/level.png",
+            "../res/sprites/elevator/outside_open.png",
+            "../res/sprites/level_0/box.png",
+            "../res/sprites/level_0/door.png",
+            "../res/sprites/level_0/chandelier.png",
+            "../res/sprites/level_0/glass_box.png",
+            "../res/sprites/level_0/gun.png",
+            "../res/sprites/collectables/rad.png",
+            "../res/sprites/elevator/lever.png"
         ]
     },
     "Type": "LevelData"

@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <memory>
+#include <cstring>
 
 #ifdef WIN32
 #include <Windows.h>

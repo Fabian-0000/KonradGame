@@ -228,9 +228,9 @@
     ],
     "Resources": {
         "Sprites": [
-            "..\\res\\sprites\\entrance\\background.png",
-            "..\\res\\sprites\\entrance\\revolving_door.png",
-            "..\\res\\sprites\\entrance\\text.png"
+            "../res/sprites/entrance/background.png",
+            "../res/sprites/entrance/revolving_door.png",
+            "../res/sprites/entrance/text.png"
         ]
     },
     "Type": "LevelData"

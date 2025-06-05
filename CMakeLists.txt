@@ -182,7 +182,10 @@ target_include_directories(game PUBLIC libs/SDL/include)
 target_include_directories(game PUBLIC libs/Json/include)
 target_link_libraries(game PUBLIC sfml-graphics)
 target_link_libraries(game PUBLIC SDL3::SDL3)
-target_link_libraries(game PUBLIC opengl32)
+
+if (UNIX) 
+    target_include_directories(game PUBLIC freetype2)
+endif()
 
 if(WIN32)
     target_link_libraries(game PUBLIC dwmapi)

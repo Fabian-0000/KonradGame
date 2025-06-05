@@ -3,15 +3,18 @@
 #include "Vector2.hpp"
 #include "Rect.hpp"
 
-struct Transform {
-	Transform() {}
+template <class T>
+struct TransformT {
+	TransformT() {}
 
 	union {
 		struct {
-			vec2 position;
-			vec2 size;
+			Vector2<T> position;
+			Vector2<T> size;
 		};
 
-		FloatRect rect;
+		Rect<T> rect;
 	};
 };
+
+typedef TransformT<float> Transform;

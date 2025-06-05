@@ -1,6 +1,7 @@
 #include "Vector2.hpp"
 #include "Collision.hpp"
 #include <algorithm>
+#include <cmath>
 
 bool RectCollide(vec2 p1, vec2 s1, float p1_response, vec2* p1_movement, vec2* p1_rect_pos, vec2* p1_rect_size, vec2 p2, vec2 s2, float p2_response, vec2* p2_movement, vec2* p2_rect_pos, vec2* p2_rect_size) {	
 	vec2 defp1 = p1, defp2 = p2;

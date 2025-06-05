@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <SFML/Graphics.hpp>
+#include <cmath>
 
 template <class T>
 class Vector2 {

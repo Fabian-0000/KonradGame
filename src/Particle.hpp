@@ -4,6 +4,7 @@
 #include "Animation.hpp"
 
 #include <vector>
+#include <memory>
 
 class ParticleSystem;
 

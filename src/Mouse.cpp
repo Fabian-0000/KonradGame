@@ -1,6 +1,8 @@
 #include "Mouse.hpp"
 #include "View.hpp"
 
+#include <cstring>
+
 void Mouse::EmptyInputList() {
 	memset(m_ButtonsDown, 0, MOUSE_BUTTON_COUNT);
 	memset(m_ButtonsUp, 0, MOUSE_BUTTON_COUNT);
