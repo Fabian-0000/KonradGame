@@ -77,7 +77,7 @@ bool Input::IsButtonPressed(Button button) {
 }
 
 vec2 Input::GetDirectionInput() {
-	if (controller->getLeftStickMovement().lengthsqr() > 0.0f) {
+	if (controller->getLeftStickMovement().x != 0.0f || controller->getLeftStickMovement().y != 0.0f) {
 		m_LastInputType = InputType::Controller;
 		return controller->getLeftStickMovement();
 	}
