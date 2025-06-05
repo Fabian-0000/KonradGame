@@ -260,17 +260,17 @@ void Player::Update(Input& input) {
 
 	sprinting = false;
 	if (!sneaking && input.IsButtonDown(Input::Button::Sprint)) {
-		if (abs(input.GetDirectionInput().x) > 0.8f) sprinting = true;
+		if (std::abs(input.GetDirectionInput().x) > 0.8f) sprinting = true;
 		sprint = 1.5f;
 	}
 
 	speed.x += input.GetDirectionInput().x * (isGrounded ? 1.0f : 0.35f) * (sneaking ? 0.35f : 1.0f) * 0.015f * 60.0f * Time.DeltaTime();
 
-	if (speed.x > 0.1f * abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f)) {
-		speed.x = 0.1f * abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f);
+	if (speed.x > 0.1f * std::abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f)) {
+		speed.x = 0.1f * std::abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f);
 	}
-	if (speed.x < -0.1f * abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f)) {
-		speed.x = -0.1f * abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f);
+	if (speed.x < -0.1f * std::abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f)) {
+		speed.x = -0.1f * std::abs(input.GetDirectionInput().x) * (sneaking ? 0.35f : 1.0f);
 	}
 
 	if (speed.x > 0.0f) {
